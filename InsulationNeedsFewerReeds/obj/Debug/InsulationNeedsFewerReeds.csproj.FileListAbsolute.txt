@@ -1,0 +1,9 @@
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\InsulationNeedsFewerReeds.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\InsulationNeedsFewerReeds.pdb
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\0Harmony.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\Assembly-CSharp.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\UnityEngine.CoreModule.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\bin\Debug\UnityEngine.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\obj\Debug\InsulationNeedsFewerReeds.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\InsulationNeedsFewerReeds\obj\Debug\InsulationNeedsFewerReeds.pdb
