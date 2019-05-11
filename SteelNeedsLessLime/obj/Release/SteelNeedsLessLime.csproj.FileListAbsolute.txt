@@ -1,0 +1,9 @@
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\SteelNeedsLessLime.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\SteelNeedsLessLime.pdb
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\0Harmony.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\Assembly-CSharp-firstpass.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\Assembly-CSharp.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\UnityEngine.CoreModule.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\bin\Release\UnityEngine.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\obj\Release\SteelNeedsLessLime.dll
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SteelNeedsLessLime\obj\Release\SteelNeedsLessLime.pdb
