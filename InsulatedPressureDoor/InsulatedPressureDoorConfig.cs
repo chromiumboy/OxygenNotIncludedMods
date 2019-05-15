@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using TUNING;
+using Harmony;
 
 class InsulatedPressureDoorConfig : PressureDoorConfig
 {

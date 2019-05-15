@@ -12,8 +12,8 @@ namespace InsulatedPressureDoor
         private static void Prefix()
         {
             Debug.Log("Prefix applied");
-            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.NAME", "Fire Safety Door");
-            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.DESC", "The insulation in the door slows temperature changes between two rooms.");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.NAME", "Thermal Isolation Door");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.DESC", "While closed, this door will slow temperature changes between two rooms.");
             Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.EFFECT", "Helps retain ambient heat in an area.");
 
             ModUtil.AddBuildingToPlanScreen("Base", InsulatedPressureDoorConfig.ID);
@@ -33,13 +33,45 @@ namespace InsulatedPressureDoor
     }
 
     [HarmonyPatch(typeof(BuildingComplete), "OnSpawn")]
-    public class ApplyColor
+    public class InsulatedPressureDoor_ApplyProperties
     {
-        public static void Postfix(BuildingComplete __instance)
+        public static void Postfix(ref BuildingComplete __instance)
         {
             if (string.Compare(__instance.name, "InsulatedPressureDoorComplete") == 0)
             {
+                Debug.Log("InsulatedPressureDoor spawned");
+
                 __instance.GetComponent<KAnimControllerBase>().TintColour = InsulatedPressureDoorConfig.Color();
+                Debug.Log("Applying colour to InsulatedPressureDoor");
+
+                IList<int> cells = __instance.GetComponent<Building>().PlacementCells;
+                for (int i = 0; i < cells.Count; i++)
+                {
+                    SimMessages.SetInsulation(cells[i], 0.01f);
+                    Debug.Log("Applying insulation to cell " + (i + 1) + " of " + cells.Count);
+                }
+
+                return;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(BuildingComplete), "OnCleanUp")]
+    public class InsulatedPressureDoor_RemoveProperties
+    {
+        public static void Postfix(ref BuildingComplete __instance)
+        {
+            if (string.Compare(__instance.name, "InsulatedPressureDoorComplete") == 0)
+            {
+                Debug.Log("InsulatedPressureDoor removed");
+
+                IList<int> cells = __instance.GetComponent<Building>().PlacementCells;
+                for (int i = 0; i < cells.Count; i++)
+                {
+                    SimMessages.SetInsulation(cells[i], 1f);
+                    Debug.Log("Removing insulation from cell " + (i + 1) + " of " + cells.Count);
+                }
+
                 return;
             }
         }
