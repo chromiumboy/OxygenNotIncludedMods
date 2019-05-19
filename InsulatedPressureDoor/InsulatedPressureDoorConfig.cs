@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using TUNING;
-using Harmony;
+using InsulatedPressureDoor;
 
 class InsulatedPressureDoorConfig : PressureDoorConfig
 {
@@ -35,6 +35,7 @@ class InsulatedPressureDoorConfig : PressureDoorConfig
         buildingDef.ForegroundLayer = Grid.SceneLayer.InteriorWall;
         SoundEventVolumeCache.instance.AddVolume("door_external_kanim", "Open_DoorPressure", NOISE_POLLUTION.NOISY.TIER2);
         SoundEventVolumeCache.instance.AddVolume("door_external_kanim", "Close_DoorPressure", NOISE_POLLUTION.NOISY.TIER2);
+
         return buildingDef;
     }
 
