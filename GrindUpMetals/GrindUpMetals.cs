@@ -16,6 +16,7 @@ namespace GrindUpMetals
 
             List<Element> list = new List<Element>() {
                 ElementLoader.GetElement(SimHashes.Cuprite.CreateTag()),
+                ElementLoader.GetElement(SimHashes.AluminumOre.CreateTag()),
                 ElementLoader.GetElement(SimHashes.GoldAmalgam.CreateTag()),
                 ElementLoader.GetElement(SimHashes.IronOre.CreateTag()),
                 ElementLoader.GetElement(SimHashes.Wolframite.CreateTag()),
@@ -42,8 +43,7 @@ namespace GrindUpMetals
                     complexRecipe = new ComplexRecipe(text, inputs, outputs);
                     complexRecipe.time = 40f;
                     complexRecipe.description = string.Format("Grind up {0} to create {1}.", lowTempTransition.name, element.name);
-                    complexRecipe.useResultAsDescription = true;
-                    complexRecipe.displayInputAndOutput = true;
+                    complexRecipe.nameDisplay = ComplexRecipe.RecipeNameDisplay.IngredientToResult;
                     complexRecipe.fabricators = new List<Tag>
                     {
                         TagManager.Create("RockCrusher")

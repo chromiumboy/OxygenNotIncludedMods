@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using STRINGS;
 using UnityEngine;
 using Harmony;
 
@@ -11,7 +12,7 @@ namespace InsulatedPressureDoor
     {
         private static void Prefix()
         {
-            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.NAME", "Thermal Isolation Door");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.NAME", UI.FormatAsLink("Thermal Isolation Door", "INSULATEDPRESSUREDOOR"));
             Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.DESC", "While closed, this door will slow temperature changes between two rooms.");
             Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDPRESSUREDOOR.EFFECT", "Helps retain ambient heat in an area.");
 
