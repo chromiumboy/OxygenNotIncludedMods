@@ -53,8 +53,6 @@ public class ExtendedLogicWireBridgeConfig : IBuildingConfig
     public override void DoPostConfigureUnderConstruction(GameObject go)
     {
         base.DoPostConfigureUnderConstruction(go);
-        Constructable component = go.GetComponent<Constructable>();
-        component.choreTags = GameTags.ChoreTypes.WiringChores;
         LogicUtilityNetworkLink logicUtilityNetworkLink = this.AddNetworkLink(go);
         logicUtilityNetworkLink.visualizeOnly = true;
         go.AddOrGet<BuildingCellVisualizer>();
