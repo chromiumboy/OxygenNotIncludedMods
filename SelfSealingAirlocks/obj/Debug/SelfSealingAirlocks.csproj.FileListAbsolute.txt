@@ -7,7 +7,9 @@ C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAi
 C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\bin\Debug\UnityEngine.dll
 C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\obj\Debug\SelfSealingAirlocks.dll
 C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\obj\Debug\SelfSealingAirlocks.pdb
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\obj\Debug\SelfSealingAirlocks.csprojResolveAssemblyReference.cache
 C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\bin\Debug\SelfSealingAirlocks.dll.config
 C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\obj\Debug\SelfSealingAirlocks.csprojAssemblyReference.cache
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\obj\Debug\SelfSealingAirlocks.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\SelfSealingAirlocks\obj\Debug\SelfSealingAirlocks.csproj.CopyComplete
