@@ -48,6 +48,9 @@ namespace ExtendedBridges
     {
         private static void Prefix()
         {
+            // Declare version number
+            Debug.Log("LOADED - Longer Bridges by chromiumboy - v 2020.03.08");
+
             // New strings
             Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLIQUIDCONDUITBRIDGE.NAME", UI.FormatAsLink("Long Liquid Bridge", "EXTENDEDLIQUIDCONDUITBRIDGE"));
             Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLIQUIDCONDUITBRIDGE.DESC", "Separate pipe systems prevent mingled contents from causing building damage.");
@@ -73,6 +76,10 @@ namespace ExtendedBridges
             Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLOGICWIREBRIDGE.DESC", "Wire bridges allow multiple automation grids to exist in a small area without connecting.");
             Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLOGICWIREBRIDGE.EFFECT", string.Concat(new string[] { "Runs one " + UI.FormatAsLink("Automation Wire", "LOGICWIRE") + " section over another two without joining them.\n\nCan be run through wall and floor tile." }));
 
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLOGICRIBBONBRIDGE.NAME", UI.FormatAsLink("Long Automation Ribbon Bridge", "EXTENDEDLOGICRIBBONBRIDGE"));
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLOGICRIBBONBRIDGE.DESC", "Wire bridges allow multiple automation grids to exist in a small area without connecting.");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.EXTENDEDLOGICRIBBONBRIDGE.EFFECT", string.Concat(new string[] { "Runs one " + UI.FormatAsLink("Automation Ribbon", "LOGICRIBBON") + " section over another two without joining them.\n\nCan be run through wall and floor tile." }));
+
             // Add to build menus
             ModUtilExtended.AddBuildingToPlanScreen("Plumbing", ExtendedLiquidConduitBridgeConfig.ID, ModUtilExtended.GetBuildingIndex("Plumbing",LiquidConduitBridgeConfig.ID) + 1);
             ModUtilExtended.AddBuildingToPlanScreen("HVAC", ExtendedGasConduitBridgeConfig.ID, ModUtilExtended.GetBuildingIndex("HVAC", GasConduitBridgeConfig.ID) + 1);
@@ -80,6 +87,7 @@ namespace ExtendedBridges
             ModUtilExtended.AddBuildingToPlanScreen("Power", ExtendedWireBridgeConfig.ID, ModUtilExtended.GetBuildingIndex("Power", WireBridgeConfig.ID) + 1);
             ModUtilExtended.AddBuildingToPlanScreen("Power", ExtendedWireRefinedBridgeConfig.ID, ModUtilExtended.GetBuildingIndex("Power", WireRefinedBridgeConfig.ID) + 1);
             ModUtilExtended.AddBuildingToPlanScreen("Automation", ExtendedLogicWireBridgeConfig.ID, ModUtilExtended.GetBuildingIndex("Automation", LogicWireBridgeConfig.ID) + 1);
+            ModUtilExtended.AddBuildingToPlanScreen("Automation", ExtendedLogicRibbonBridgeConfig.ID, ModUtilExtended.GetBuildingIndex("Automation", LogicRibbonBridgeConfig.ID) + 1);
         }
     }
 
@@ -114,6 +122,10 @@ namespace ExtendedBridges
             ls = new List<string>(Database.Techs.TECH_GROUPING["LogicCircuits"]);
             ls.Add(ExtendedLogicWireBridgeConfig.ID);
             Database.Techs.TECH_GROUPING["LogicCircuits"] = ls.ToArray();
+
+            ls = new List<string>(Database.Techs.TECH_GROUPING["ParallelAutomation"]);
+            ls.Add(ExtendedLogicRibbonBridgeConfig.ID);
+            Database.Techs.TECH_GROUPING["ParallelAutomation"] = ls.ToArray();
         }
     }
 
@@ -130,6 +142,7 @@ namespace ExtendedBridges
                 "ExtendedWireBridge",
                 "ExtendedWireRefinedBridge",
                 "ExtendedLogicWireBridge",
+                "ExtendedLogicRibbonBridge",
             };
 
             // Check to see if the building is on the above list
@@ -147,6 +160,13 @@ namespace ExtendedBridges
                 {
                     KPrefabID kPrefabID = __instance.gameObject.AddOrGet<KPrefabID>();
                     kPrefabID.PrefabTag = TagManager.Create("LogicWireBridge");
+                }
+
+                // Change the prefab tag on the extended automation ribbon bridge
+                if (string.Equals(__instance.name, "ExtendedLogicRibbonBridgeComplete"))
+                {
+                    KPrefabID kPrefabID = __instance.gameObject.AddOrGet<KPrefabID>();
+                    kPrefabID.PrefabTag = TagManager.Create("LogicRibbonBridge");
                 }
             }
         }
