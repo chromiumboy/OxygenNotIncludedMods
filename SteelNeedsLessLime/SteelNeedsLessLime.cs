@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
-using Harmony;
+using HarmonyLib;
 
 namespace SteelNeedsLessLime
 {
     [HarmonyPatch(typeof(MetalRefineryConfig), "ConfigureBuildingTemplate")]
-    internal class MetalRefineryConfig_ConfigureBuildingTemplate
+    internal class MetalRefineryConfig_ConfigureBuildingTemplate : KMod.UserMod2
     {
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instr)
         { 

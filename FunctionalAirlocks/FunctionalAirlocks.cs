@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using Harmony;
+using HarmonyLib;
 using UnityEngine;
 
 namespace FunctionalAirlocks
 {
     [HarmonyPatch(typeof(Door), "OnPrefabInit")]
-    internal class FunctionalAirlocks_Door_OnPrefabInit
+    internal class FunctionalAirlocks_Door_OnPrefabInit : KMod.UserMod2
     {
         private static void Postfix(ref Door __instance)
         {

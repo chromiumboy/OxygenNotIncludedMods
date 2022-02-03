@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using STRINGS;
 using UnityEngine;
-using Harmony;
+using HarmonyLib;
 
 namespace InsulatedPressureDoor
 {
     // Add strings for the new door and add it to the build menu
     [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
-    internal class InsulatedPressureDoor_GeneratedBuildings_LoadGeneratedBuildings
+    internal class InsulatedPressureDoor_GeneratedBuildings_LoadGeneratedBuildings : KMod.UserMod2
     {
         private static void Prefix()
         {

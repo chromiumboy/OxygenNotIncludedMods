@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
-using Harmony;
+using HarmonyLib;
 
 namespace InsulationNeedsFewerReeds
 {
     [HarmonyPatch(typeof(SupermaterialRefineryConfig), "ConfigureBuildingTemplate")]
-    internal class SupermaterialRefineryConfig_ConfigureBuildingTemplate
+    internal class SupermaterialRefineryConfig_ConfigureBuildingTemplate : KMod.UserMod2
     {
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instr)
         {

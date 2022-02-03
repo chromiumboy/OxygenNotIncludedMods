@@ -5,7 +5,7 @@ using System.Text;
 using STRINGS;
 using TUNING;
 using UnityEngine;
-using Harmony;
+using HarmonyLib;
 
 namespace ExtendedBridges
 {
@@ -44,7 +44,7 @@ namespace ExtendedBridges
 
     // Add strings for the bridges and add them to the build menu
     [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
-    internal class ExtendedBridges_GeneratedBuildings_LoadGeneratedBuildings
+    internal class ExtendedBridges_GeneratedBuildings_LoadGeneratedBuildings : KMod.UserMod2
     {
         private static void Prefix()
         {
