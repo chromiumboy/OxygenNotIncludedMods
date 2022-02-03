@@ -28,7 +28,7 @@ public class ChemicalBurnMonitor : KMonoBehaviour
     public static StatusItem MakeStatusItem()
     {
         StatusItem statusItem = new StatusItem("ChemicalBurns", "DUPLICANTS", string.Empty, StatusItem.IconType.Exclamation, NotificationType.DuplicantThreatening, false, OverlayModes.None.ID, true, 63486);
-        statusItem.AddNotification(null, null, null, 0f);
+        statusItem.AddNotification(null, null, null);
         return statusItem;
     }
 

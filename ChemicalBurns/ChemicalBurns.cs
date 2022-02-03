@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using Harmony;
+using HarmonyLib;
 
 namespace ChemicalBurns
 {
     // Add mod strings
     [HarmonyPatch(typeof(EntityConfigManager), "LoadGeneratedEntities")]
-    internal class ChemicalBurns_EntityConfigManager_LoadGeneratedEntities
+    internal class ChemicalBurns_EntityConfigManager_LoadGeneratedEntities : KMod.UserMod2
     {
         private static void Prefix()
         {

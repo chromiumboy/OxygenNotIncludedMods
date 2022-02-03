@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Harmony;
+using HarmonyLib;
 
 namespace NoSublimationWhenItemsAreInStorage
 {
     [HarmonyPatch(typeof(Storage), "OnPrefabInit")]
-    internal class NoSublimationWhenItemsAreInStorage_Storage_OnPrefabInit
+    internal class NoSublimationWhenItemsAreInStorage_Storage_OnPrefabInit : KMod.UserMod2
     {
         private static void Postfix(ref Storage __instance)
         {

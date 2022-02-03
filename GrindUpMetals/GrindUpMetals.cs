@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Harmony;
+using HarmonyLib;
 
 namespace GrindUpMetals
 {
     [HarmonyPatch(typeof(RockCrusherConfig), "ConfigureBuildingTemplate")]
-    internal class RockCrusherConfig_ConfigureBuildingTemplate
+    internal class RockCrusherConfig_ConfigureBuildingTemplate : KMod.UserMod2
     {
         private static void Postfix(RockCrusherConfig __instance)
         {

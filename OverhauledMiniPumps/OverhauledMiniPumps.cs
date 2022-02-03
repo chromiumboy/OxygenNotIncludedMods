@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using TUNING;
 using UnityEngine;
-using Harmony;
+using HarmonyLib;
 
 namespace OverhauledMiniPumps
 {
     // Add strings for the new door and add it to the build menu
     [HarmonyPatch(typeof(LiquidMiniPumpConfig), "CreateBuildingDef")]
-    internal class OverhauledMiniPumps_LiquidMiniPumpConfig_CreateBuildingDef
+    internal class OverhauledMiniPumps_LiquidMiniPumpConfig_CreateBuildingDef : KMod.UserMod2
     {
         private static void Postfix(LiquidMiniPumpConfig __instance, ref BuildingDef __result)
         {

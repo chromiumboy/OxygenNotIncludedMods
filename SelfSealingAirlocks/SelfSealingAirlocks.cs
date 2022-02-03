@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Harmony;
+using HarmonyLib;
 
 namespace SelfSealingAirlocks
 {
     // Add anim override (necesary to prevent game crash)
     [HarmonyPatch(typeof(Door), "OnPrefabInit")]
-    internal class SelfSealingAirlocks_Door_OnPrefabInit
+    internal class SelfSealingAirlocks_Door_OnPrefabInit : KMod.UserMod2
     {
         private static void Postfix(ref Door __instance)
         {

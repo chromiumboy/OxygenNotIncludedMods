@@ -1,9 +1,0 @@
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\ChlorineIsDangerous.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\ChlorineIsDangerous.pdb
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\0Harmony.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\Assembly-CSharp-firstpass.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\Assembly-CSharp.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\UnityEngine.CoreModule.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\bin\Debug\UnityEngine.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\obj\Debug\ChlorineIsDangerous.dll
-C:\Users\Ryan\Documents\Klei\OxygenNotIncluded\mods\mod_dev\Source\ChlorineIsDangerous\obj\Debug\ChlorineIsDangerous.pdb
