@@ -5,7 +5,7 @@ using System.Text;
 using STRINGS;
 using TUNING;
 using UnityEngine;
-using Harmony;
+using HarmonyLib;
 
 namespace ExtendedBridges
 {
@@ -16,12 +16,8 @@ namespace ExtendedBridges
         // Add building to planning screen at specified position
         public static void AddBuildingToPlanScreen(HashedString category, string building_id, int id = 0)
         {
-            int num = TUNING.BUILDINGS.PLANORDER.FindIndex((PlanScreen.PlanInfo x) => x.category == category);
-            if (num < 0)
-            { return; }
-
-            IList<string> list = TUNING.BUILDINGS.PLANORDER[num].data as IList<string>;
-            list.Insert(id, building_id);
+            // Use officially supported call to add to the build menu, which sadly doesn't support ordering after another building id.
+            ModUtil.AddBuildingToPlanScreen(category, building_id);
         }
 
         // Get list position of a building
@@ -95,37 +91,30 @@ namespace ExtendedBridges
     [HarmonyPatch(typeof(Db), "Initialize")]
     internal class InsulatedPressureDoor_Db_Initialize
     {
-        private static void Prefix(Db __instance)
+        public static void Postfix()
         {
-            List<string> ls;
+            Tech tech;
 
-            ls = new List<string>(Database.Techs.TECH_GROUPING["ImprovedLiquidPiping"]);
-            ls.Add(ExtendedLiquidConduitBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["ImprovedLiquidPiping"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("ImprovedLiquidPiping");
+            tech.unlockedItemIDs.Add(ExtendedLiquidConduitBridgeConfig.ID);
 
-            ls = new List<string>(Database.Techs.TECH_GROUPING["ImprovedGasPiping"]);
-            ls.Add(ExtendedGasConduitBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["ImprovedGasPiping"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("ImprovedGasPiping");
+            tech.unlockedItemIDs.Add(ExtendedGasConduitBridgeConfig.ID);
 
-            ls = new List<string>(Database.Techs.TECH_GROUPING["SolidTransport"]);
-            ls.Insert(2, ExtendedSolidConduitBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["SolidTransport"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("SolidTransport");
+            tech.unlockedItemIDs.Add(ExtendedSolidConduitBridgeConfig.ID);
         
-            ls = new List<string>(Database.Techs.TECH_GROUPING["AdvancedPowerRegulation"]);
-            ls.Add(ExtendedWireBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["AdvancedPowerRegulation"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("AdvancedPowerRegulation");
+            tech.unlockedItemIDs.Add(ExtendedWireBridgeConfig.ID);
 
-            ls = new List<string>(Database.Techs.TECH_GROUPING["PrettyGoodConductors"]);
-            ls.Insert(2, ExtendedWireRefinedBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["PrettyGoodConductors"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("PrettyGoodConductors");
+            tech.unlockedItemIDs.Add(ExtendedWireRefinedBridgeConfig.ID);
 
-            ls = new List<string>(Database.Techs.TECH_GROUPING["LogicCircuits"]);
-            ls.Add(ExtendedLogicWireBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["LogicCircuits"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("LogicCircuits");
+            tech.unlockedItemIDs.Add(ExtendedLogicWireBridgeConfig.ID);
 
-            ls = new List<string>(Database.Techs.TECH_GROUPING["ParallelAutomation"]);
-            ls.Add(ExtendedLogicRibbonBridgeConfig.ID);
-            Database.Techs.TECH_GROUPING["ParallelAutomation"] = ls.ToArray();
+            tech = Db.Get().Techs.TryGet("ParallelAutomation");
+            tech.unlockedItemIDs.Add(ExtendedLogicRibbonBridgeConfig.ID);
         }
     }
 
